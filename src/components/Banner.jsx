@@ -1,10 +1,14 @@
+import classNames from "classnames";
 import React from "react";
 
 const Banner = (props) => {
   const bannerImg = props.imageClass
     ? props.imageClass
     : "bg-[url(" + props.image + ")]";
-  const bannerImgClasses = `${bannerImg} dark:bg-nature-dark bg-cover object-cover bg-center h-[20rem] md:h-[27rem] lg:h-[35rem] w-full`;
+  const bannerImgClasses = classNames(
+    `${bannerImg} bg-cover object-cover bg-center w-full`,
+    "h-[20rem] md:h-[27rem] lg:h-[35rem]"
+  );
 
   return (
     <section className="relative">

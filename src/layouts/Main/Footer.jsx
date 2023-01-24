@@ -3,120 +3,120 @@ import { Link } from "react-router-dom";
 
 const Footer = (props) => {
   return (
-    <footer class="bg-white">
-      <div class="grid grid-cols-2 gap-8 py-8 px-6 md:grid-cols-4">
+    <footer className="bg-white">
+      <div className="grid grid-cols-2 gap-8 py-8 px-6 md:grid-cols-4">
         <div>
-          <h2 class="mb-6 text-sm font-semibold text-gray-500 uppercase">
+          <h2 className="mb-6 text-sm font-semibold text-gray-500 uppercase">
             Company
           </h2>
-          <ul class="text-gray-500">
-            <li class="mb-4">
-              <a href="#" class=" hover:underline">
+          <ul className="text-gray-500">
+            <li className="mb-4">
+              <a href="#" className=" hover:underline">
                 About
               </a>
             </li>
-            <li class="mb-4">
-              <a href="#" class="hover:underline">
+            <li className="mb-4">
+              <a href="#" className="hover:underline">
                 Careers
               </a>
             </li>
-            <li class="mb-4">
-              <a href="#" class="hover:underline">
+            <li className="mb-4">
+              <a href="#" className="hover:underline">
                 Brand Center
               </a>
             </li>
-            <li class="mb-4">
-              <a href="#" class="hover:underline">
+            <li className="mb-4">
+              <a href="#" className="hover:underline">
                 Blog
               </a>
             </li>
           </ul>
         </div>
         <div>
-          <h2 class="mb-6 text-sm font-semibold text-gray-500 uppercase">
+          <h2 className="mb-6 text-sm font-semibold text-gray-500 uppercase">
             Help center
           </h2>
-          <ul class="text-gray-500">
-            <li class="mb-4">
-              <a href="#" class="hover:underline">
+          <ul className="text-gray-500">
+            <li className="mb-4">
+              <a href="#" className="hover:underline">
                 Discord Server
               </a>
             </li>
-            <li class="mb-4">
-              <a href="#" class="hover:underline">
+            <li className="mb-4">
+              <a href="#" className="hover:underline">
                 Twitter
               </a>
             </li>
-            <li class="mb-4">
-              <a href="#" class="hover:underline">
+            <li className="mb-4">
+              <a href="#" className="hover:underline">
                 Facebook
               </a>
             </li>
-            <li class="mb-4">
-              <a href="#" class="hover:underline">
+            <li className="mb-4">
+              <a href="#" className="hover:underline">
                 Contact Us
               </a>
             </li>
           </ul>
         </div>
         <div>
-          <h2 class="mb-6 text-sm font-semibold text-gray-500 uppercase">
+          <h2 className="mb-6 text-sm font-semibold text-gray-500 uppercase">
             Legal
           </h2>
-          <ul class="text-gray-500">
-            <li class="mb-4">
-              <a href="#" class="hover:underline">
+          <ul className="text-gray-500">
+            <li className="mb-4">
+              <a href="#" className="hover:underline">
                 Privacy Policy
               </a>
             </li>
-            <li class="mb-4">
-              <a href="#" class="hover:underline">
+            <li className="mb-4">
+              <a href="#" className="hover:underline">
                 Licensing
               </a>
             </li>
-            <li class="mb-4">
-              <a href="#" class="hover:underline">
+            <li className="mb-4">
+              <a href="#" className="hover:underline">
                 Terms &amp; Conditions
               </a>
             </li>
           </ul>
         </div>
         <div>
-          <h2 class="mb-6 text-sm font-semibold text-gray-500 uppercase">
+          <h2 className="mb-6 text-sm font-semibold text-gray-500 uppercase">
             Download
           </h2>
-          <ul class="text-gray-500">
-            <li class="mb-4">
-              <a href="#" class="hover:underline">
+          <ul className="text-gray-500">
+            <li className="mb-4">
+              <a href="#" className="hover:underline">
                 iOS
               </a>
             </li>
-            <li class="mb-4">
-              <a href="#" class="hover:underline">
+            <li className="mb-4">
+              <a href="#" className="hover:underline">
                 Android
               </a>
             </li>
-            <li class="mb-4">
-              <a href="#" class="hover:underline">
+            <li className="mb-4">
+              <a href="#" className="hover:underline">
                 Windows
               </a>
             </li>
-            <li class="mb-4">
-              <a href="#" class="hover:underline">
+            <li className="mb-4">
+              <a href="#" className="hover:underline">
                 MacOS
               </a>
             </li>
           </ul>
         </div>
       </div>
-      <div class="py-6 px-4 bg-gray-100 flex flex-col items-center md:flex-row md:justify-between">
-        <span class="text-sm text-gray-500 sm:text-center">
+      <div className="py-6 px-4 bg-gray-100 flex flex-col items-center md:flex-row md:justify-between">
+        <span className="text-sm text-gray-500 sm:text-center">
           © 2022 <Link to="/">Upseasonal™</Link>. All Rights Reserved.
         </span>
-        <div class="flex mt-4 space-x-6 sm:justify-center md:mt-0">
-          <a href="#" class="text-gray-400 hover:text-gray-900">
+        <div className="flex mt-4 space-x-6 sm:justify-center md:mt-0">
+          <a href="#" className="text-gray-400 hover:text-gray-900">
             <svg
-              class="w-5 h-5"
+              className="w-5 h-5"
               fill="currentColor"
               viewBox="0 0 24 24"
               aria-hidden="true"
@@ -127,11 +127,11 @@ const Footer = (props) => {
                 clipRule="evenodd"
               ></path>
             </svg>
-            <span class="sr-only">Facebook page</span>
+            <span className="sr-only">Facebook page</span>
           </a>
-          <a href="#" class="text-gray-400 hover:text-gray-900">
+          <a href="#" className="text-gray-400 hover:text-gray-900">
             <svg
-              class="w-5 h-5"
+              className="w-5 h-5"
               fill="currentColor"
               viewBox="0 0 24 24"
               aria-hidden="true"
@@ -142,18 +142,18 @@ const Footer = (props) => {
                 clipRule="evenodd"
               ></path>
             </svg>
-            <span class="sr-only">Instagram page</span>
+            <span className="sr-only">Instagram page</span>
           </a>
-          <a href="#" class="text-gray-400 hover:text-gray-900">
+          <a href="#" className="text-gray-400 hover:text-gray-900">
             <svg
-              class="w-5 h-5"
+              className="w-5 h-5"
               fill="currentColor"
               viewBox="0 0 24 24"
               aria-hidden="true"
             >
               <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path>
             </svg>
-            <span class="sr-only">Twitter page</span>
+            <span className="sr-only">Twitter page</span>
           </a>
         </div>
       </div>

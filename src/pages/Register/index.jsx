@@ -9,62 +9,78 @@ import { useAuth } from "../../hooks/useAuth";
 import { toast } from "react-toastify";
 
 const Register = (props) => {
-  // const { form, updateForm, isValid } = useForm(FORM_OPTIONS);
-  // const { login } = useAuth();
+  const { form, updateForm, isValid } = useForm(FORM_OPTIONS);
+  const { register } = useAuth();
 
   function handleUpdateForm(e) {
-    // const { value, id } = e;
-    // updateForm({ value, id });
+    const { value, id } = e;
+    updateForm({ value, id });
   }
 
   async function handleSubmit() {
-    // try {
-    //   login(form);
-    // } catch (err) {}
+    register({ user: form });
   }
-
-  // if (user.err?.name === "TokenExpiredError") {
-  //   toast("Session expired", {
-  //     type: "warning",
-  //     toastId: "sessionExpired",
-  //     progressClassName: "bg-blue-500",
-  //     // onClose: logout,
-  //   });
-  // }
 
   return (
     <>
-      <div className="w-full md:w-3/4">
-        <p className="text-center text-4xl font-bold pb-5">Sign up</p>
-        <div className="my-3">
-          <Input id="email" onChange={handleUpdateForm} placeholder="Email" />
+      <div className="min-h-full w-full md:h-screen flex items-center px-4 justify-center py-12">
+        <div className="max-w-md w-full space-y-8">
+          <div className="w-full">
+            <p className="text-center text-4xl font-bold pb-5">
+              Create Account
+            </p>
+            <div className="my-3">
+              <Input
+                id="email"
+                onChange={handleUpdateForm}
+                placeholder="Email"
+                value={form.email}
+              />
+            </div>
+            <div className="my-3">
+              <Input
+                id="password"
+                onChange={handleUpdateForm}
+                type="password"
+                placeholder="Password"
+                value={form.password}
+              />
+            </div>
+            {/* <div className="flex items-center justify-between">
+              <Checkbox
+                label="Remember me"
+                id="rememberMe"
+                onChange={(e) =>
+                  handleUpdateForm({ id: e.id, value: e.checked })
+                }
+              />
+              <Link
+                to="/forgot/password"
+                className="hover:underline font-semibold"
+              >
+                Forgot Password?
+              </Link>
+            </div> */}
+            <div className="my-3">
+              <Button
+                type="dark"
+                // disabled={!isValid}
+                onClick={handleSubmit}
+                className="w-full"
+              >
+                Sign Up
+              </Button>
+            </div>
+          </div>
+          <div className="text-center pt-10">
+            <p>
+              Already have an account?{" "}
+              <Link to="/login" className="underline font-semibold">
+                Click here
+              </Link>
+            </p>
+          </div>
         </div>
-        <div className="my-3">
-          <Input
-            id="password"
-            onChange={handleUpdateForm}
-            type="password"
-            placeholder="Password"
-          />
-        </div>
-        <div className="my-3">
-          <Button
-            type="dark"
-            // disabled={!isValid}
-            onClick={handleSubmit}
-            className="w-full"
-          >
-            Submit
-          </Button>
-        </div>
-      </div>
-      <div className="text-center pt-10">
-        <p>
-          Need help?{" "}
-          <Link to="/help" className="underline font-semibold">
-            Click here
-          </Link>
-        </p>
       </div>
     </>
   );

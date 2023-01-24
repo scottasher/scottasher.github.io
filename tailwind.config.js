@@ -17,10 +17,10 @@ module.exports = {
         "web-fill": "-webkit-fill-available",
       },
       backgroundImage: {
-        "home-banner":
+        "banner-home":
           "url('https://cdn2.coolworks.com/wp-content/uploads/2019/02/05155005/HERO-WP-REsources.jpg')",
       },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
 };

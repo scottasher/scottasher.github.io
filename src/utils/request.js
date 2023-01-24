@@ -27,11 +27,12 @@ async function request(url, option) {
 export default request;
 
 export function renderQueries(obj) {
+  if (!obj) return "";
   const queryKeys = Object.keys(obj);
 
   const res = queryKeys.map((key) => {
     return `${key}=${obj[key]}`;
   });
 
-  return res.join("&");
+  return "?" + res.join("&");
 }

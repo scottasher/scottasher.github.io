@@ -44,6 +44,19 @@ export const userLogin = createAsyncThunk("account/userLogin", async (data) => {
   return res.data;
 });
 
+export const userRegister = createAsyncThunk(
+  "account/userRegister",
+  async (data) => {
+    const res = await request(`/account`, {
+      method: "post",
+      data: { user: data },
+    });
+
+    // setToken(res.data.user.apiTok);
+    return res.data;
+  }
+);
+
 export const updateAccount = createAsyncThunk(
   "account/updateAccount",
   async (data) => {
@@ -111,6 +124,19 @@ export const accountSlice = createSlice({
         state.currentUser = action.payload.user;
       })
       .addCase(updateAccount.rejected, (state, action) => {
+        state.status = "failed";
+        state.error = action.error.message;
+      })
+      // END UPDATE USER
+      // UPDATE USER
+      .addCase(userRegister.pending, (state) => {
+        state.status = "loading";
+      })
+      .addCase(userRegister.fulfilled, (state, action) => {
+        state.status = "succeeded";
+        state.currentUser = action.payload.user;
+      })
+      .addCase(userRegister.rejected, (state, action) => {
         state.status = "failed";
         state.error = action.error.message;
       });

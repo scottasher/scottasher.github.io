@@ -1,15 +1,16 @@
 import React, { useContext } from "react";
 import { NavLink, Outlet, Link } from "react-router-dom";
-import Drawer from "../components/Drawer";
-import useWindowSize from "../hooks/useWindowSize";
+import Drawer from "../../components/Drawer";
+import useWindowSize from "../../hooks/useWindowSize";
 import Footer from "./Footer";
 import LayoutHeader from "./LayoutHeader";
-import { LayoutContext } from "./Root";
+import { LayoutContext } from "../Root";
 
 const menuItems = [
-  { title: "Find a job", path: "/find-job" },
+  // { title: "Home", path: "/" },
+  { title: "Places", path: "/places" },
   { title: "Resouces", path: "/resources" },
-  { title: "Blog", path: "/blog" },
+  // { title: "Blog", path: "/blog" },
 ];
 
 const MainLayout = (props) => {
